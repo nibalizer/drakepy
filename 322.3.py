@@ -10,7 +10,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import array 
-from ch2eq import *
+from hw3eq import *
 
 ##	Normal Functions	##
 def promptForNumber(prompt):
@@ -65,17 +65,9 @@ def mainmenu():
 def chap2p14():
 	for i in range(40):
 		print "\n"
-	print "Welcome to Problem 2.2"
-	print "What is the effect of cross sectional area?"
-	print "For two riders, one in the front of the pack, another drafting from the middle, the difference in cross sectional area is about 30%"
-	print "Equation 2.10 (call it with '7' on the main menu) shows velocity vs time for constant power."
-	print "This equation asymptotically approaches the terminal velocity for a given set of conditions."
-	print "Assuming that terminal velocity is when v(t+1) = v(t) we can rearange eq 2.10 as:"
-	print "P=C*rho*A*(v^3)/2"
-	print "This allows us to graph power vs cross sectional area for any terminal velocity."
-	print "We now call function problem2_2(), call it from mainmenu with '2.2'"
+	print "Welcome to problem 2.14"
 
-	problem2_2()
+	problem2_14()
 
 		
 	print "Problem done"
