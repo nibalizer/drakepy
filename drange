@@ -1,0 +1,8 @@
+
+def drange(start, stop, step);
+	r = start
+	while r < stop:
+		yeild r
+		r += step
+
+
