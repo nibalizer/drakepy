@@ -66,6 +66,10 @@ def chap2p14():
 	for i in range(40):
 		print "\n"
 	print "Welcome to problem 2.14"
+	print "Text of the problem:"
+	print "Consider the effect of a crosswind on the trajectory of a fly ball. How much will a wind of 10mph directed at right angles to the initial velocity alter the place where one of the fly balls in Figure 2.7 lands?"
+	print "Figure 2.7 assumes a ball batted at 110mph(49.1744 m/s) 35 degress above the horizontal."
+	print "Figure 2.7 shows 3 paths, one without wind, one with 10mph(4.4704 m/s) headwind, and another with a 10mph tailwind."
 
 	problem2_14()
 
