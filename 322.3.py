@@ -38,7 +38,7 @@ def mainmenu():
 		print "The following imputs should do things:"
 		print functions
 		print "For numbers not 1,2,3; the number corresponds to the equation from the book being modeled."
-		print "For instance the imput of 7 starts a function for eq 2.7"
+		print "For instance the imput of 2.7 starts a function for eq 2.7"
 		while True:	
 			number = promptForNumber("Run problem: ")
 			if number in functions:
@@ -51,8 +51,6 @@ def mainmenu():
 					chap2_3_3()
 				elif number == 4:
 					chap2_3_4()
-				elif number == 10:
-					eq2_10()
 				elif number == 2.14:
 					problem2_14()
 				elif number == 2.18:
@@ -98,9 +96,9 @@ def chap2_3_3():
 	for i in range(20):
 		print ""
 	print "Welcome to Problem 3.3"
-	print "The effect of step size delta t on a pendulum"
-	print "Following book examples in section 3.1"
-	problem3_3()
+	print "From the syllabus"
+	print "Following book examples in Appendix"
+	syllabus3_3()
 	print "Problem done"
 	raw_input("Press return to go back to the mainmenu")
 	mainmenu()
@@ -108,9 +106,9 @@ def chap2_3_3():
 def chap2_3_4():
 	for i in range(20):
 		print ""
-	print "Welcome to Problem 2.2"
-	print "A cannonball with the effects of air."
-	print "Lets do problem2_9"
+	print "Welcome to Problem 3.4"
+	print "From the syllabus"
+	print "Following boox examples in Appendix"
 	problem2_9()
 	print "Problem done"
 	raw_input("Press return to go back to the mainmenu")

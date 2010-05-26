@@ -221,9 +221,22 @@ def problem3_3():
 	draw()
 	hold(False)
 
-
-
-
-
-
-
+def syllabus3_3():
+	##	Setup
+	print "Find the root of f(x) = cos(x)-x = 0 by the method of bisection. How many iterations are necessary to determine the root to eight significant figures?"
+	##	Input
+	left = promptForNumber("Enter the choice of the left side bound")
+	right = promptForNumber("Enter the choice of the right side bound")
+	##	Precalculations
+	g = lambda x: cos(x) - x
+	while True:
+		middle = (left + right)/2
+		if (g(left) == math.copysign(g(left),g(middle))):
+			print "The zero is between %f and %f" % (left, middle)
+			right = middle
+		else:
+			print "The zero is between %f and %f" % (middle, right)
+			left = middle
+		promptForNumber("Go for another iteration?")
+	
+		
