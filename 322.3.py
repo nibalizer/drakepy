@@ -28,7 +28,7 @@ def promptForNumber(prompt):
 
 def mainmenu():
 	while True:
-		functions = (1,2,3,4)
+		functions = (1,2,3,2.14,2.18,3.3)
 		
 		print "Welcome to Spencer Krum's 322 Assignment 3"
 		print "Press q at any time to leave"
@@ -53,10 +53,12 @@ def mainmenu():
 					chap2_3_4()
 				elif number == 10:
 					eq2_10()
-				elif number == 2.2:
-					problem2_2()
-				elif number == 2.6:
-					problem2_6()	
+				elif number == 2.14:
+					problem2_14()
+				elif number == 2.18:
+					problem2_18()
+				elif number == 3.3:
+					problem3_3()
 			else: 
 				print "Sorry, There is no problem or equation number %d" % number
 
@@ -81,12 +83,12 @@ def chap2p14():
 def chap2p18():
 	for i in range(20):
 		print ""
-	print "Welcome to Problem 2.6"
-	print "A cannonball launched in a vacuum."
-	print "Following book example pseudocode 2.2"
-	print "We now call function problem 2_6(), call it from mainmenu with '2.6'"
+	print "Welcome to Problem 2.18"
+	print "The effect of backspin on a fastball"
+	print "Following book examples in section 2.4"
+	print "We now call function problem 2_18(), call it from mainmenu with '2.18'"
 	
-	problem2_6()
+	problem2_18()
 
 	print "Problem done"
 	raw_input("Press return to go back to the mainmenu")
@@ -95,10 +97,10 @@ def chap2p18():
 def chap2_3_3():
 	for i in range(20):
 		print ""
-	print "Welcome to Problem 2.2"
-	print "A cannonball with the effects of air."
-	print "Lets do problem2_9"
-	problem2_9()
+	print "Welcome to Problem 3.3"
+	print "The effect of step size delta t on a pendulum"
+	print "Following book examples in section 3.1"
+	problem3_3()
 	print "Problem done"
 	raw_input("Press return to go back to the mainmenu")
 	mainmenu()
