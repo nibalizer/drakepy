@@ -35,7 +35,7 @@ def mainmenu():
 		print ""
 		print "There are 4 problems. Press 1,2, 3, or 4 to run that problem."
 		print "A number of functions are loaded from chapter 2 as well."
-		print "The following imputs should do things:"
+		print "The following imputs should do things: "
 		print functions
 		print "For numbers not 1,2,3; the number corresponds to the equation from the book being modeled."
 		print "For instance the imput of 2.7 starts a function for eq 2.7"

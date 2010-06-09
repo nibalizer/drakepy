@@ -19,9 +19,15 @@ def promptForNumber(prompt):
 			return number
 	except ValueError:
 	    print "You did not enter a number.\n"
-
-
-
+def sign(number):
+	while True:
+		try:
+			if  abs(number) == number:
+				return 1
+			else:
+				return -1
+		except ValueError:
+			print "Not a number?"
 
 def problem2_14_a():
 	##	Input
@@ -225,18 +231,23 @@ def syllabus3_3():
 	##	Setup
 	print "Find the root of f(x) = cos(x)-x = 0 by the method of bisection. How many iterations are necessary to determine the root to eight significant figures?"
 	##	Input
-	left = promptForNumber("Enter the choice of the left side bound")
-	right = promptForNumber("Enter the choice of the right side bound")
+	left = promptForNumber("Enter the choice of the left side bound(suggest 0): ")
+	right = promptForNumber("Enter the choice of the right side bound(suggest 1): ")
 	##	Precalculations
 	g = lambda x: cos(x) - x
+	iterations = 1
+	##	Main Loop
 	while True:
 		middle = (left + right)/2
-		if (g(left) == math.copysign(g(left),g(middle))):
-			print "The zero is between %f and %f" % (left, middle)
+		if sign(g(left)) != sign(g(middle)):
+			print "The zero is between %.08f and %.08f, maximum uncertainty %.08f, iterations: %d" % (left, middle, abs(middle-right), iterations)
 			right = middle
 		else:
-			print "The zero is between %f and %f" % (middle, right)
+			print "The zero is between %.08f and %.08f, maximum uncertainty %.08f, iterations: %d" % (middle, right, abs(middle-right), iterations)
 			left = middle
-		promptForNumber("Go for another iteration?")
-	
+		iterations += 1
+		response = raw_input("Go for another iteration? (y/n)")
+		if response == "n":
+			return
+					
 		
