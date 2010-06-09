@@ -15,9 +15,10 @@ def theNumber():
 			return number
 		except ValueError:
 			print "Please enter an integer"
-def collatz(number):
-	length = 0
-	while (number != 1):
+def collatz(number_):
+	length = -1
+	number = number_
+	while (number > 1):
 		print "The number is %d" % number
 		length += 1
 		if (number % 2 == 0):
@@ -28,11 +29,11 @@ def collatz(number):
 			number = (number*3)+1
 
 	print "The number is one, the number of steps was %d" % length
-	return length, number
+	return length, number_
 x = 1
-for i in range(theNumber()):
+for i in range(theNumber()+1):
 	y, a = collatz(i)
 	if x <= y:
-		print "The number %d has length %d" % (a, y)
 		x = y
-	
+		z = a	
+print "The number %d has length %d" % (z, x)
