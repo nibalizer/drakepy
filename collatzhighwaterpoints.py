@@ -7,9 +7,10 @@ print "Collatz Conjecture."
 print "Collatz conjecture is that any positive integer will become 1 after the following procedure is applied a sufficient number of times."
 print "If the number is even, divide it by two. If the number is odd multiply by three and add one."
 
-def theNumber():
+
+def theNumber(prompt):
 	while True:	
-		number = raw_input("Please input a starting integer: ")
+		number = raw_input(prompt)
 		try:	
 			number = abs(int(number))
 			return number
@@ -31,7 +32,9 @@ def collatz(number_):
 	print "The number is one, the number of steps was %d" % length
 	return length, number_
 x = 1
-for i in range(theNumber()+1):
+start = theNumber("Please give a starting integer: ")
+end = theNumber("Please give an ending integer: ")
+for i in range(start + 1 ,end + 1):
 	y, a = collatz(i)
 	if x <= y:
 		x = y
