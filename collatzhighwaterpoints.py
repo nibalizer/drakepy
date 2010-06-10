@@ -23,10 +23,10 @@ def collatz(number_):
 		print "The number is %d" % number
 		length += 1
 		if (number % 2 == 0):
-			print "The number is even, therefore divide by two"
+		#	print "The number is even, therefore divide by two"
 			number = number/2
 		else:
-			print "The number is odd, therefore multiply by three and add one"
+		#	print "The number is odd, therefore multiply by three and add one"
 			number = (number*3)+1
 
 	print "The number is one, the number of steps was %d" % length
