@@ -7,7 +7,7 @@ print "Collatz Conjecture."
 print "Collatz conjecture is that any positive integer will become 1 after the following procedure is applied a sufficient number of times."
 print "If the number is even, divide it by two. If the number is odd multiply by three and add one."
 
-
+#the number 63728127 has length 948
 def theNumber(prompt):
 	while True:	
 		number = raw_input(prompt)
