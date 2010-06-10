@@ -20,9 +20,10 @@ highwater = pickle.load(picklefile)
 
 
 blank = []
-for i in range(start + 1, end + 1):
+i = start
+while i < end:
 	blank.append(i)
- 
+ 	i += 1
 
 ion()
 plot(blank,highwater, 'o')

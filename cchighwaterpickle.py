@@ -29,7 +29,8 @@ def collatz(number_):
 	#		print "The number is odd, therefore multiply by three and add one"
 			number = (number*3)+1
 
-	print "The number is %d the number of steps was %d" % (number_, length)
+	if number_ % 100 == 0:
+		print "The number is %d the number of steps was %d" % (number_, length)
 	return length, number
 
 x = 1
@@ -38,13 +39,15 @@ blank = []
 name = raw_input("Name the new file: ")
 start = theNumber("Starting number: ")
 end = theNumber("Ending number: ")
-for i in range(start + 1, end + 1):
+i = start
+while i < end:
 	y, a = collatz(i)
 	if x <= y:
 		print "The number %d has length %d" % (a, y)
 		x = y
 	highwater.append(y)
 	blank.append(i)
+	i += 1
 picklefile = open(name, 'w')
 pickle.dump(highwater, picklefile)
 
