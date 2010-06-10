@@ -29,7 +29,7 @@ def collatz(number_):
 		#	print "The number is odd, therefore multiply by three and add one"
 			number = (number*3)+1
 
-	print "The number is one, the number of steps was %d" % length
+	print "The number is %d, the number of steps was %d" % (number_,length)
 	return length, number_
 x = 1
 start = theNumber("Please give a starting integer: ")
