@@ -34,6 +34,7 @@ def collatz(number_):
 x = 1
 highwater = []
 blank = []
+name = raw_input("Name the new file: ")
 start = theNumber("Starting number: ")
 end = theNumber("Ending number: ")
 for i in range(start + 1, end + 1):
@@ -50,5 +51,4 @@ xlabel('Initial number')
 grid(True)
 draw()
 hold(False)
-savefig('Fig1.png')
-raw_input("Press return to finish")
+savefig(name)
